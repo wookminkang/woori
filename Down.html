@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>T1 Down!!</title>
-</head>
-<body>
-<h1 style="color: red; font-size: xxx-large">T1 따운!!!</h1>
-<h1 style="color: blue; font-size: xxx-large">카나비</h1>
-<img src="https://file.thisisgame.com/upload/nboard/news/2022/01/26/20220126154446_1867.jpg">
-<div>
-    <h2>개선 사항 -- 워딩 추가</h2>
-    <p></p>
-    <ul class="img-ul">
+  </head>
+  <body>
+    <h1 style="color: red; font-size: xxx-large">T1 따운!!!</h1>
+    <h1 style="color: blue; font-size: xxx-large">카나비</h1>
+    <img
+      src="https://file.thisisgame.com/upload/nboard/news/2022/01/26/20220126154446_1867.jpg"
+    />
+    <div>
+      <h2>개선 사항 -- 워딩 추가</h2>
+      <p></p>
+      <ul class="img-ul"></ul>
+      <h1>안녕하세요.ㅈㄷㄹ 반갑습니다. 강민욱 문창규입니다.</h1>
+    </div>
 
-    </ul>
-    <h1>
-        안녕하세요.ㅈㄷㄹ
-
-        반갑습니다.
-    </h1>
-</div>
-
-<script>
-    fetch("https://picsum.photos/v2/list")
-        .then(res => res.json())
-        .then((data)=> {
-            const img_ul = document.querySelector(".img-ul");
-            let append_html = "";
-            console.log(data)
-            data.forEach((el)=>{
-                append_html += `<li><img src="${el.download_url}" width="100" height="70"></li>`;
-            })
-            img_ul.innerHTML = append_html
+    <script>
+      fetch("https://picsum.photos/v2/list")
+        .then((res) => res.json())
+        .then((data) => {
+          const img_ul = document.querySelector(".img-ul");
+          let append_html = "";
+          console.log(data);
+          data.forEach((el) => {
+            append_html += `<li><img src="${el.download_url}" width="100" height="70"></li>`;
+          });
+          img_ul.innerHTML = append_html;
         });
-
-
-
-</script>
-</body>
+    </script>
+  </body>
 </html>
-
